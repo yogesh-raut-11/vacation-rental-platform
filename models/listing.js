@@ -10,11 +10,12 @@ const listingSchema = new Schema({
     image:{
         filename:{
              type:String,
-              default:"listingimage",
+              default: "listingimage",
         },
         url:{
             type : String,
-            default:"https://images.pixels.com/photos/37144687/pixels-photo-37144687.jpeg"
+            default:
+                "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
         },
     },
     price:Number,
