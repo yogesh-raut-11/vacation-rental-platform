@@ -1,0 +1,28 @@
+const express=require("express");
+const router=express.Router();
+
+router.get("/",(req,res)=>{
+    res.send("Hi, I am root ");
+});
+
+//Index Route
+router.get("/",(req,res)=>{
+    res.send("GET for users")
+})
+
+//Show Route
+router.get("/:id",(req,res)=>{
+    res.send("GET for user id")
+})
+
+//Post Route
+router.post("/",(req,res)=>{
+    res.send("Post for users")
+})
+
+//Delete Route
+router.delete("/:id",(req,res)=>{
+    res.send("Delete for user id")
+})
+
+module.exports=router;
