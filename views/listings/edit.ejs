@@ -1,7 +1,9 @@
  <%- layout("layouts/boilerplate") -%>
- <div class="row mt-3">
+ <body>
+    <div class="row mt-3">
     <div class="col-8 offset-2">
     <h3>Edit your listing</h3>
+    
     <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation">
     <div class="mb-3">
         <label for="title" class="form-label">Title</label>
@@ -17,7 +19,7 @@
 
     <div class="mb-3">
         <label for="image" class="form-label">Image Link</label> 
-        <input name=" listing[image]" type="text" class="form-control" value="<%=listing.image.url%>" required>
+        <input name="listing[image][url]" type="text" class="form-control" value="<%= listing.image.url %>" required>
         <div class="invalid-feedback">please Enter Valid link for image</div>
 
     </div>
@@ -45,3 +47,5 @@
     </form>
     </div>
  </div>
+ </body>
+ 
